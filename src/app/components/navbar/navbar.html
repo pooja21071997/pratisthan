@@ -1,71 +1,39 @@
-<nav class="navbar navbar-expand-lg bg-white px-4">
+<nav class="navbar navbar-expand-lg navbar-light bg-white px-4">
   <div class="container-fluid">
+
     <!-- Logo -->
-    <a class="navbar-brand" href="#">
-      <img src="assets/images/footer.png" height="50" />
+    <a class="navbar-brand" routerLink="/">
+      <img src="assets/images/footer.png" class="no-hover" height="50" alt="Logo" />
     </a>
 
-    <!-- Hamburger button -->
+    <!-- Hamburger -->
     <button
       class="navbar-toggler"
       type="button"
       data-bs-toggle="collapse"
       data-bs-target="#mainNavbar"
-    >
+      aria-controls="mainNavbar"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- Collapsible Menu -->
-    <div class="collapse navbar-collapse" id="mainNavbar">
+    <!-- Menu -->
+    <div class="collapse navbar-collapse" id="mainNavbar" #navbar>
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link fw-semibold" (click)="closeNavbar()" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"  routerLink="/">Home</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link fw-semibold" (click)="closeNavbar()" routerLinkActive="active" routerLink="/about"
-            >About</a
-          >
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link fw-semibold" (click)="closeNavbar()" routerLinkActive="active" routerLink="/founder-message"
-            >Founder's Message</a
-          >
-        </li>
-
-        <!-- <li class="nav-item">
-          <a class="nav-link fw-semibold"   (click)="closeNavbar()" routerLinkActive="active" routerLink="/academics">अभ्यासक्रम</a>
-        </li> -->
-
-        <li class="nav-item">
-          <a class="nav-link fw-semibold" (click)="closeNavbar()" routerLinkActive="active" routerLink="/management">
-            Management
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fw-semibold" (click)="closeNavbar()" routerLinkActive="active" routerLink="/institutes">
-            Institutes
-          </a>
-        </li>
-         <li class="nav-item">
-          <a class="nav-link fw-semibold" (click)="closeNavbar()" routerLinkActive="active" routerLink="/initiatives">
-            Initiatives
-          </a>
-        </li>
-         
-         <li class="nav-item">
-          <a class="nav-link fw-semibold" (click)="closeNavbar()" routerLinkActive="active" routerLink="/gallery">
-            Gallery
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fw-semibold" (click)="closeNavbar()" routerLinkActive="active" routerLink="/contact">
-            Contact Us
+        <li class="nav-item" *ngFor="let item of menu">
+          <a
+            class="nav-link fw-semibold"
+            routerLinkActive="active"
+            [routerLink]="item.link"
+            (click)="closeNavbar()"
+            [routerLinkActiveOptions]="{ exact: true }">
+            {{ item.label }}
           </a>
         </li>
       </ul>
     </div>
+
   </div>
 </nav>
 

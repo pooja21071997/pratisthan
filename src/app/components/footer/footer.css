@@ -1,56 +1,54 @@
 .footer {
-  background-color: #ffffff;
+  background: #fff;
   border-top: 1px solid #e5e5e5;
   font-family: Arial, sans-serif;
 }
 
-/* Main content */
+/* Layout */
 .footer-content {
-  display: flex;
-  justify-content: space-between;
-  padding: 40px 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 40px;
+  padding: 40px 80px;
 }
 
-/* Left side */
-.footer-left {
-  max-width: 600px;
-}
-
-.logo-row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 15px;
-}
-
+/* Logo */
 .footer-logo {
-  width: 45px;
-  height: 45px;
+  width: 320px;
+  height: 66px;
+  margin-bottom: 12px;
 }
 
-.school-name {
-  font-size: 18px;
-  font-weight: bold;
-  color: #d60000;
-}
-
+/* Text */
 .footer-text {
   font-size: 14px;
-  line-height: 1.8;
+  line-height: 1.7;
   color: #1a237e;
 }
 
-/* Right side */
-.footer-right {
+/* Headings */
+.footer h4 {
+  color: red;
+  margin-bottom: 8px;
   text-align: center;
 }
 
-.footer-right h4 {
-  color: red;
-  margin-bottom: 10px;
+/* Contact */
+.footer-contact p {
+  margin-bottom: 6px;
+  text-align: center;
 }
 
+.footer-contact a {
+  color: #111;
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  text-decoration: underline;
+}
+
+/* Social */
 .social-icons {
   display: flex;
   justify-content: center;
@@ -60,7 +58,7 @@
 .social-icons a {
   color: #000;
   font-size: 18px;
-  transition: 0.3s;
+  transition: color 0.3s ease;
 }
 
 .social-icons a:hover {
@@ -72,35 +70,15 @@
   border-top: 1px solid #dcdcdc;
   padding: 15px;
   text-align: center;
-  font-weight: bold;
   font-size: 13px;
+  font-weight: 600;
   color: #030303;
 }
 
-/* Responsive */
+/* Mobile */
 @media (max-width: 768px) {
   .footer-content {
-    flex-direction: column;
     padding: 30px 20px;
+    text-align: center;
   }
-
-  .footer-right {
-    margin-top: 20px;
-  }
-}
-.footer-contact h4,
-.footer-social h4 {
-  color: red;
-  text-align: center;
-  margin-bottom: 8px;
-}
-
-.footer-contact p {
-  margin-bottom: 6px;
-  text-align: center;
-}
-
-.footer-contact a {
-  color: #111;
-  text-decoration: none;
 }

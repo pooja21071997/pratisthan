@@ -1,0 +1,13 @@
+.institute-card img {
+  object-fit: cover;
+  height: 220px;
+}
+
+.institute-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.institute-link:hover {
+  color: #dc3545; /* bootstrap danger */
+}

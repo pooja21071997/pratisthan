@@ -19,8 +19,10 @@ export class AlbumComponent {
     const slug = this.route.snapshot.paramMap.get('slug');
 
     if (slug) {
-      this.album = ALBUMS.find(a => a.slug === slug);
+      this.album = ALBUMS.find((a) => a.slug === slug);
     }
   }
-
+  trackByPhoto(index: number, photo: string) {
+    return photo;
+  }
 }

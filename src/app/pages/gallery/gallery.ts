@@ -11,5 +11,7 @@ import { CommonModule } from '@angular/common';
 })
 export class Gallery {
  albums = ALBUMS;
-
+trackBySlug(index: number, album: any) {
+  return album.slug;
+}
 }

@@ -4,7 +4,110 @@
 }
 
 .album-title {
-  color: red;
+  color: #dc3545; /* Bootstrap danger */
   font-weight: 600;
-  text-decoration: underline;
+}
+.album-card .card {
+  transition: 
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Image base */
+.album-card img {
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+/* 🔥 Hover / Focus effect */
+.album-card:hover .card,
+.album-card:focus-visible .card {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 
+    0 10px 30px rgba(13, 110, 253, 0.35),
+    0 0 0 2px rgba(13, 110, 253, 0.15);
+}
+
+/* Slight image zoom */
+.album-card:hover img {
+  transform: scale(1.08);
+}
+
+/* Title color change on hover */
+.album-card:hover .album-title {
+  color: #0d6efd; /* Bootstrap primary blue */
+}
+
+/* Keyboard accessibility */
+.album-card:focus-visible {
+  outline: none;
+}
+/* Card base */
+.album-card .card {
+  border-radius: 14px;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+  position: relative;
+  background: #fff;
+}
+
+/* Image wrapper (prevents zoom overflow only for image) */
+.album-card .card-img-top {
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+}
+
+/* 🔥 OUTER BLUE SHADOW */
+.album-card:hover .card,
+.album-card:focus-visible .card {
+  transform: translateY(-10px);
+  box-shadow:
+    0 20px 45px rgba(13, 110, 253, 0.35),
+    0 0 25px rgba(13, 110, 253, 0.45);
+}
+
+/* Image zoom stays inside card */
+.album-card:hover .card-img-top {
+  transform: scale(1.08);
+}
+
+/* Title hover color */
+.album-title {
+  color: #dc3545;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.album-card:hover .album-title {
+  color: #0d6efd;
+}
+
+/* Keyboard accessibility */
+.album-card:focus-visible {
+  outline: none;
+}
+
+.hover-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(13, 110, 253, 0.15),
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
+.album-card:hover .hover-glow {
+  opacity: 1;
 }

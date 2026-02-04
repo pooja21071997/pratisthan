@@ -4,14 +4,21 @@
   <div class="row g-4">
     <div
       class="col-lg-3 col-md-4 col-sm-6"
-      *ngFor="let album of albums"
+      *ngFor="let album of albums; trackBy: trackBySlug"
     >
       <a
         [routerLink]="['/gallery', album.slug]"
-        class="album-card text-decoration-none"
+        class="album-card text-decoration-none d-block h-100"
+        aria-label="Open album {{ album.name }}"
       >
         <div class="card h-100 shadow-sm">
-          <img [src]="album.cover" class="card-img-top" />
+         <div class="hover-glow"></div>
+          <img
+            [src]="album.cover"
+            [alt]="album.name + ' cover'"
+            loading="lazy"
+            class="card-img-top"
+          />
 
           <div class="card-body text-center">
             <h6 class="album-title">{{ album.name }}</h6>

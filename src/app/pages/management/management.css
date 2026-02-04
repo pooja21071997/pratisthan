@@ -1,0 +1,12 @@
+.management-table th {
+  background-color: #f8f9fa;
+}
+
+.management-table td,
+.management-table th {
+  padding: 14px;
+}
+
+.management-table tbody tr:hover {
+  background-color: rgba(220, 53, 69, 0.05);
+}
