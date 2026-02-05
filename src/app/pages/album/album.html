@@ -1,21 +1,30 @@
-<div class="container py-5" *ngIf="album">
-  <!-- Album title -->
-  <h2 class="text-danger fw-bold mb-5 text-center">
+<div class="container py-5 album-view" *ngIf="album">
+  <!-- Album Title -->
+  <h2 class="text-blue fw-bold mb-5 text-center album-title">
     {{ album.name }}
   </h2>
 
   <!-- If sub-albums exist -->
   <ng-container *ngIf="album.subAlbums?.length; else flatAlbum">
-    <section *ngFor="let sub of album.subAlbums">
-      <h4 class="text-danger fw-bold mb-3 mt-5">
+    <section *ngFor="let sub of album.subAlbums; let si = index">
+      <h4 class="text-blue fw-bold mb-5 mt-5 sub-album-title">
         {{ sub.name }}
+        <div class="line"></div>
       </h4>
 
-      <div class="row g-4">
-        <ng-container *ngFor="let photo of sub.photos; trackBy: trackByPhoto">
-          <div class="col-lg-4 col-md-6">
-            <div class="photo-card shadow-sm">
-              <img [src]="photo" [alt]="sub.name + ' photo'" loading="lazy" />
+      <div class="row g-4 photo-grid">
+        <ng-container *ngFor="let photo of sub.photos; let pi = index; trackBy: trackByPhoto">
+          <div
+            class="col-lg-4 col-md-6"
+            [style.animation-delay]="(pi * 0.12) + 's'"
+          >
+            <div class="photo-card enhanced-card">
+              <div class="photo-glow"></div>
+              <img
+                [src]="photo"
+                [alt]="sub.name + ' photo'"
+                loading="lazy"
+              />
             </div>
           </div>
         </ng-container>
@@ -25,11 +34,19 @@
 
   <!-- No sub-albums -->
   <ng-template #flatAlbum>
-    <div class="row g-4">
-      <ng-container *ngFor="let photo of album.photos">
-        <div class="col-lg-4 col-md-6">
-          <div class="photo-card shadow-sm">
-            <img [src]="photo" [alt]="album.name + ' photo'" loading="lazy" />
+    <div class="row g-4 photo-grid">
+      <ng-container *ngFor="let photo of album.photos; let i = index">
+        <div
+          class="col-lg-4 col-md-6"
+          [style.animation-delay]="(i * 0.12) + 's'"
+        >
+          <div class="photo-card enhanced-card">
+            <div class="photo-glow"></div>
+            <img
+              [src]="photo"
+              [alt]="album.name + ' photo'"
+              loading="lazy"
+            />
           </div>
         </div>
       </ng-container>

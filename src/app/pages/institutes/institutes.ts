@@ -13,7 +13,7 @@ export class Institutes {
     {
       name: 'Dr Avinash Achaarya Vidyalaya',
       image: 'assets/images/Institutes/Acharya.jpg',
-      link: 'http://localhost:64595/',
+      link: 'http://localhost:50314/',
       description:
         'Building Foundations with Semi English Pre-Primary And Primary Education',
     },

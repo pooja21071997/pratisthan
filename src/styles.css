@@ -26,7 +26,7 @@
 .line {
   width: 80px;
   height: 4px;
-  background: linear-gradient(90deg, #ffb03b, #ff6a00);
+  background: linear-gradient(90deg, #d0d0e9, #15025c);
   margin: 0.5rem 0 1.2rem 0;
   border-radius: 2px;
 }
@@ -38,68 +38,68 @@
   border-radius: 2px;
 }
 .pdf-viewer {
-  height:85vh; 
-  border:1px solid #ccc;
+  height: 85vh;
+  border: 1px solid #ccc;
 }
-.pdf{
-    width:100%; 
-    height:100%; 
-    display:block;
+.pdf {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 /* Container for rocket icon and pulsing circle */
 .rocket-circle-container {
-	position: relative;
-	width: 60px;
-	height: 60px;
-	margin: 0 auto;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  position: relative;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .rocket-circle-container i {
-	position: relative;
-	z-index: 10;
+  position: relative;
+  z-index: 10;
 }
 
 /* Pulsing circle below rocket icon */
 .pulsing-circle {
-	width: 95px;
-	height: 95px;
-	border-radius: 50%;
-	background-color: #ffc107;
-	position: absolute;
-	top: 0;
-	
-	transform: translateX(-50%);
-	animation: circlePulse 2000ms ease-in-out infinite;
-	box-shadow: 0 4px 15px rgba(255, 193, 7, 0.3);
-	z-index: 0;
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  background-color: #8db7e7;
+  position: absolute;
+  top: 0;
+
+  transform: translateX(-50%);
+  animation: circlePulse 2000ms ease-in-out infinite;
+  box-shadow: 0 4px 15px rgba(255, 193, 7, 0.3);
+  z-index: 0;
 }
 
 @keyframes circlePulse {
-	0% { 
-		transform: scale(0.8);
-		opacity: 0.6;
-	}
-	50% { 
-		transform: scale(1.1);
-		opacity: 1;
-	}
-	100% { 
-		transform: scale(0.8);
-		opacity: 0.6;
-	}
+  0% {
+    transform: scale(0.8);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.8);
+    opacity: 0.6;
+  }
 }
-.bg-inspiration{
-	background: #fea100;
+.bg-inspiration {
+  background: #d0defd;
 }
-.bg-inspiration{
-	background: #fea100;
-}
+
 .institute-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -148,19 +148,13 @@
 
 /* TITLE */
 .section-title {
-  color: #e11d2a;
+  color: #15025c;
   font-size: 28px;
   font-weight: 700;
   margin-bottom: 10px;
 }
 
-/* ORANGE LINE */
-.title-underline {
-  width: 120px;
-  height: 5px;
-  background-color: #f59e0b;
-  margin-bottom: 40px;
-}
+
 
 /* GRID */
 .testing-grid {
@@ -171,7 +165,7 @@
 
 /* CARD */
 .testing-card {
-  background-color: #fffaf0;
+  background-color: #d0defd;
   border: 1px solid #9ca3af;
   padding: 25px;
   display: flex;
@@ -190,11 +184,7 @@
   margin: 0;
 }
 
-.testing-card p {
-  color: #6b7280;
-  margin: 0;
-  line-height: 1.5;
-}
+
 
 /* FOOTER TEXT */
 .section-footer {
@@ -211,17 +201,17 @@
   }
 }
 .line {
-    width: 120px;
-    height: 10px;
-    background-color: #ffc107;
-    margin: 10px;
+  width: 120px;
+  height: 10px;
+  background-color: #ffc107;
+  margin: 10px;
 }
 .table-row:nth-child(even) {
-    background-color: #f7f7f7;
+  background-color: #f7f7f7;
 }
 
 .table-row:nth-child(odd) {
-    background-color: #ffffff;
+  background-color: #ffffff;
 }
 /* SERVICE CARD */
 .service-card h4 {
@@ -234,12 +224,13 @@
   color: #6b7280;
   line-height: 1.6;
   margin-top: 10px;
-}.bg-initiatives{
-    background-color: #ffedcd;
-}.bg-initiatives {
-  background-color: #fdebd0;
+}
+
+.bg-initiatives {
+  background-color: #d0defd;
   padding: 60px 20px;
-}.white-box {
+}
+.white-box {
   background-color: #ffffff;
   max-width: 1200px;
   margin: auto;
@@ -247,21 +238,6 @@
   border-radius: 4px;
 }
 
-/* TITLE */
-.section-title {
-  color: #e11d2a;
-  font-size: 28px;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-/* ORANGE LINE */
-.title-underline {
-  width: 120px;
-  height: 5px;
-  background-color: #f59e0b;
-  margin-bottom: 40px;
-}
 /* SERVICES GRID */
 .services-grid {
   display: grid;
@@ -281,12 +257,13 @@
   line-height: 1.6;
   margin-top: 10px;
 }
-
+.text-orange { color: #15025c; }
+.text-blue { color: #15025c; }
 /* ICON CIRCLE */
 .icon-circle {
   width: 70px;
   height: 70px;
-  background-color: #f59e0b;
+  background-color: #8db7e7;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -360,8 +337,8 @@ img {
 /* Hover & keyboard focus */
 img:hover,
 img:focus-visible {
-  border: 2px solid #fd7e14; /* Bootstrap orange */
-  box-shadow: 0 6px 18px rgba(253, 126, 20, 0.35);
+  border: 2px solid #15025c; 
+  box-shadow: 0 6px 18px rgba(110, 112, 238, 0.35);
   transform: scale(1.02);
 }
 img {

@@ -1,17 +1,21 @@
-<div class="container my-5">
+<div class="container my-5 institute-section">
   <div class="row g-4">
 
     <div
       class="col-lg-4 col-md-6 col-sm-12"
-      *ngFor="let institute of institutes"
+      *ngFor="let institute of institutes; let i = index"
       [class.mx-auto]="institute.center"
+      [style.animation-delay]="i * 0.15 + 's'"
     >
       <div class="card institute-card h-100">
-        <img
-          [src]="institute.image"
-          class="card-img-top"
-          [alt]="institute.name"
-        />
+        <div class="image-wrapper">
+          <img
+            [src]="institute.image"
+            class="card-img-top"
+            [alt]="institute.name"
+          />
+          <div class="image-overlay"></div>
+        </div>
 
         <div class="card-body">
           <h5 class="card-title">

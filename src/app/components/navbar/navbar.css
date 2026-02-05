@@ -17,3 +17,10 @@
 .bg-warning {
   height: 4px;
 }
+.bg-blue{
+  background:#15025c;
+  height: 4px;
+}
+.nav-item a{
+  font-size: medium;
+}

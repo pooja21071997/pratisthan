@@ -1,24 +1,33 @@
-<div class="text-center my-4">
-  <h2 class="fw-bold text-danger">Management</h2>
-  <div class="line mx-auto my-2"></div>
+<div class="text-center my-5 management-header">
+  <h2 class="fw-bold text-blue glow-title">Management</h2>
+  <div class="line mx-auto my-3 animated-line"></div>
+  <p class="text-muted fst-italic">Guiding vision • Trusted leadership • Strong foundation</p>
 </div>
 
 <div class="container mb-5">
-  <div class="table-responsive col-12 col-md-8 col-lg-6 mx-auto">
-    <table class="table table-bordered align-middle management-table">
-      <thead class="table-light fw-bold">
-        <tr>
-          <th>Name</th>
-          <th>Designation</th>
-        </tr>
-      </thead>
+  <div class="table-responsive col-12 col-md-9 col-lg-7 mx-auto">
+    <div class="management-glass">
+      <table class="table align-middle management-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Designation</th>
+          </tr>
+        </thead>
 
-      <tbody>
-        <tr *ngFor="let member of members">
-          <td>{{ member.name }}</td>
-          <td>{{ member.role }}</td>
-        </tr>
-      </tbody>
-    </table>
+        <tbody>
+          <tr *ngFor="let member of members; let i = index"
+              [style.animation-delay]="i * 0.12 + 's'">
+            <td>
+              <span class="name-dot"></span>
+              {{ member.name }}
+            </td>
+            <td>
+              <span class="role-pill">{{ member.role }}</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>

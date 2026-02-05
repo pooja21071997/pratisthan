@@ -28,7 +28,7 @@
 
 /* Headings */
 .footer h4 {
-  color: red;
+  color: #15025c;
   margin-bottom: 8px;
   text-align: center;
 }
@@ -62,7 +62,7 @@
 }
 
 .social-icons a:hover {
-  color: red;
+  color: #15025c;
 }
 
 /* Bottom bar */

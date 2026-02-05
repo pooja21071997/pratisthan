@@ -4,7 +4,7 @@
 }
 
 .album-title {
-  color: #dc3545; /* Bootstrap danger */
+  color: #15025c; /* Bootstrap danger */
   font-weight: 600;
 }
 .album-card .card {
@@ -81,7 +81,7 @@
 
 /* Title hover color */
 .album-title {
-  color: #dc3545;
+  color: #15025c;
   font-weight: 600;
   transition: color 0.3s ease;
 }
@@ -110,4 +110,129 @@
 
 .album-card:hover .hover-glow {
   opacity: 1;
+}
+.gallery-section {
+  animation: fadeUp 1s ease forwards;
+}
+
+.gallery-title {
+  animation: glowText 3s ease-in-out infinite;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glowText {
+  0%,100% { text-shadow: 0 0 0 rgba(13,110,253,0); }
+  50% { text-shadow: 0 0 18px rgba(13,110,253,0.45); }
+}
+.gallery-card {
+  position: relative;
+  border-radius: 22px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.4);
+
+  transform: translateY(30px) scale(0.95);
+  opacity: 0;
+  animation: cardEnter 0.8s ease forwards;
+  transition: all 0.6s cubic-bezier(.22,.61,.36,1);
+}
+
+@keyframes cardEnter {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.gradient-border {
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(
+    120deg,
+    #0d6efd,
+    #00c6ff,
+    #ff9800,
+    #0d6efd
+  );
+  background-size: 300% 300%;
+  animation: borderFlow 6s linear infinite;
+  opacity: 0;
+  z-index: 0;
+}
+
+@keyframes borderFlow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 300% 50%; }
+}
+
+.gallery-card:hover .gradient-border {
+  opacity: 1;
+}
+.image-wrapper {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.image-wrapper img {
+  transition: transform 0.9s ease;
+}
+
+.gallery-card:hover img {
+  transform: scale(1.15) rotate(1deg);
+}
+.image-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(13,110,253,0.35),
+    rgba(0,0,0,0.65)
+  );
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.gallery-card:hover .image-overlay {
+  opacity: 1;
+}
+.gallery-card:hover {
+  transform: translateY(-18px) scale(1.05);
+  box-shadow:
+    0 35px 90px rgba(13,110,253,0.35),
+    0 0 0 3px rgba(13,110,253,0.25);
+}
+.album-title {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #0d6efd;
+  transform: translateY(10px);
+  opacity: 0.75;
+  transition: all 0.4s ease;
+}
+
+.gallery-card:hover .album-title {
+  transform: translateY(0);
+  opacity: 1;
+  text-shadow: 0 0 10px rgba(13,110,253,0.4);
+}
+.gallery-card {
+  animation:
+    cardEnter 0.8s ease forwards,
+    floatGallery 8s ease-in-out infinite;
+}
+
+@keyframes floatGallery {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
 }

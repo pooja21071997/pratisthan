@@ -11,3 +11,117 @@
 .institute-link:hover {
   color: #dc3545; /* bootstrap danger */
 }
+.institute-section {
+  animation: fadeSectionUp 1.2s ease forwards;
+}
+
+@keyframes fadeSectionUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.institute-card {
+  position: relative;
+  border-radius: 22px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.35);
+  box-shadow:
+    0 20px 45px rgba(0,0,0,0.12),
+    inset 0 0 0 1px rgba(255,255,255,0.4);
+
+  transform: translateY(30px) scale(0.95);
+  opacity: 0;
+  animation: cardReveal 0.8s ease forwards;
+  transition: all 0.6s ease;
+}
+
+@keyframes cardReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.institute-card:hover {
+  transform: translateY(-18px) scale(1.04);
+  box-shadow:
+    0 35px 80px rgba(13,110,253,0.35),
+    0 0 0 3px rgba(13,110,253,0.15);
+}
+.image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-wrapper img {
+  transition: transform 0.8s ease;
+}
+
+.institute-card:hover img {
+  transform: scale(1.12);
+}
+.image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(13,110,253,0.35),
+    rgba(255,152,0,0.25)
+  );
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.institute-card:hover .image-overlay {
+  opacity: 1;
+}
+.institute-link {
+  position: relative;
+  text-decoration: none;
+  font-weight: 700;
+  color: #0d6efd;
+  transition: color 0.3s ease;
+}
+
+.institute-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #0d6efd, #ff9800);
+  transition: width 0.4s ease;
+}
+
+.institute-card:hover .institute-link::after {
+  width: 100%;
+}
+
+.institute-card:hover .institute-link {
+  color: #ff5722;
+}
+.institute-card .card-text {
+  transition: color 0.4s ease, transform 0.4s ease;
+}
+
+.institute-card:hover .card-text {
+  color: #333 !important;
+  transform: translateY(-4px);
+}
+.institute-card {
+  animation:
+    cardReveal 0.8s ease forwards,
+    floatCard 7s ease-in-out infinite;
+}
+
+@keyframes floatCard {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}

@@ -1,24 +1,29 @@
-<div class="container py-5">
-  <h2 class="text-danger fw-bold mb-4">Gallery</h2>
+<div class="container py-5 gallery-section">
+  <h2 class="text-blue fw-bold mb-4 gallery-title">Gallery</h2>
 
   <div class="row g-4">
     <div
       class="col-lg-3 col-md-4 col-sm-6"
-      *ngFor="let album of albums; trackBy: trackBySlug"
+      *ngFor="let album of albums; let i = index; trackBy: trackBySlug"
+      [style.animation-delay]="i * 0.12 + 's'"
     >
       <a
         [routerLink]="['/gallery', album.slug]"
         class="album-card text-decoration-none d-block h-100"
         aria-label="Open album {{ album.name }}"
       >
-        <div class="card h-100 shadow-sm">
-         <div class="hover-glow"></div>
-          <img
-            [src]="album.cover"
-            [alt]="album.name + ' cover'"
-            loading="lazy"
-            class="card-img-top"
-          />
+        <div class="card gallery-card h-100">
+          <div class="gradient-border"></div>
+
+          <div class="image-wrapper">
+            <img
+              [src]="album.cover"
+              [alt]="album.name + ' cover'"
+              loading="lazy"
+              class="card-img-top"
+            />
+            <div class="image-overlay"></div>
+          </div>
 
           <div class="card-body text-center">
             <h6 class="album-title">{{ album.name }}</h6>

@@ -10,3 +10,95 @@
 .management-table tbody tr:hover {
   background-color: rgba(220, 53, 69, 0.05);
 }
+.management-glass {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+  padding: 15px;
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.12),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+  animation: glassFadeUp 1s ease forwards;
+}
+.glow-title {
+  position: relative;
+  text-shadow: 0 0 18px rgba(13,110,253,0.35);
+}
+
+.animated-line {
+  width: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #0d6efd, #ff9800);
+  animation: lineGrow 1.2s ease forwards;
+}
+
+@keyframes lineGrow {
+  to { width: 120px; }
+}
+.management-table {
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+
+.management-table thead th {
+  border: none;
+  background: transparent;
+  font-weight: 700;
+  color: #0d6efd;
+  padding: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.management-table tbody tr {
+  background: #fff;
+  border-radius: 14px;
+  opacity: 0;
+  transform: translateY(25px);
+  animation: rowReveal 0.6s ease forwards;
+  transition: all 0.45s ease;
+}
+
+@keyframes rowReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.management-table tbody tr:hover {
+  transform: scale(1.02);
+  box-shadow:
+    0 15px 40px rgba(13,110,253,0.25),
+    0 0 0 2px rgba(13,110,253,0.15);
+  z-index: 5;
+}
+.name-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: linear-gradient(135deg, #0d6efd, #00c6ff);
+  border-radius: 50%;
+  margin-right: 10px;
+  box-shadow: 0 0 10px rgba(13,110,253,0.6);
+}
+.role-pill {
+  padding: 6px 14px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #ff9800, #ff5722);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  box-shadow: 0 6px 18px rgba(255,87,34,0.35);
+  transition: transform 0.3s ease;
+}
+
+.management-table tbody tr:hover .role-pill {
+  transform: scale(1.1);
+}
+.management-header {
+  animation: floatHeader 6s ease-in-out infinite;
+}
+
+@keyframes floatHeader {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
