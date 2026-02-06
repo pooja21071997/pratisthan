@@ -383,15 +383,7 @@
   position: absolute;
   inset: 0;
   border-radius: 22px;
-  background: linear-gradient(
-    135deg,
-   #6764f1
-
-,
-  #040263
-
-
-  );
+  background: linear-gradient(135deg, #6764f1,  #040263, #b4b3f4);
   opacity: 0;
   transition: opacity 0.45s ease;
   z-index: 0;
@@ -1005,14 +997,3 @@
 
 
 
-/*  background: linear-gradient(135deg, #f39dbb
-, #da4c7e
-); //pink
- box-shadow:0 0 0 3px #5754f0,0 20px 45px #040263
-//blue
-background: linear-gradient(
-    135deg,
-   #6764f1
-,
-  #040263
-//blue */
