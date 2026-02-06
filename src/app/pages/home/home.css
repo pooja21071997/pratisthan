@@ -174,11 +174,12 @@
   border-radius: 50%;
   background:
     conic-gradient(
-      #a9bbcf 0deg,
-      #0751db 120deg,
-      #a8bbfa 240deg,
-      #1f07fa 360deg
+      #dfa5b9 0deg,
+       #f39dbb 120deg,
+       #ffcfe0 240deg,
+      #da4c7e 360deg
     );
+  
   animation: spin 6s linear infinite;
 }
 .circle::before {
@@ -201,7 +202,8 @@
   position: absolute;
   inset: -2px;
   border-radius: 22px;
-  background: linear-gradient(135deg, #ff9800, #ff5722, #ffd180);
+  color:#fff;
+  background: linear-gradient(135deg, #6764f1,  #040263, #b4b3f4);
   opacity: 0;
   transition: opacity 0.4s ease;
   z-index: -1;
@@ -246,13 +248,23 @@
 /* Text */
 .objective-chart h5 {
   font-weight: 700;
-  color:#15025c;
+  /* color:#15025c; */
   margin-bottom: 10px;
 }
 
 .objective-chart p {
   font-size: 14.5px;
-  color: #555;
+  /* color: #555; */
+}
+.objective-chart::after h5  {
+  font-weight: 700;
+  color: #FFF;
+  margin-bottom: 10px;
+}
+
+.objective-chart::after p {
+  font-size: 14.5px;
+  color: #FFF;
 }
 
 /* Animations */
@@ -306,8 +318,10 @@
   width: 72px;
   height: 72px;
   border-radius: 50%;
- background: linear-gradient(135deg, #1e88e5, #0d47a1);
-  box-shadow: 0 10px 25px rgba(30, 136, 229, 0.45);
+ background: linear-gradient(135deg, #f39dbb
+, #da4c7e
+);
+  box-shadow: 0 10px 25px #f7bbd0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -335,10 +349,8 @@
 /* Hover focus */
 .value-card:hover {
   transform: translateY(-14px) scale(1.04);
-  border: 2px solid #ff9800;
-  box-shadow:
-    0 0 0 3px rgba(255,152,0,0.35),
-    0 20px 45px rgba(255,87,34,0.35);
+  border: 2px solid #3F3F46; 
+  box-shadow:0 0 0 3px #5754f0,0 20px 45px #040263;
 }
 
 /* Slow animation on hover (premium feel) */
@@ -373,8 +385,12 @@
   border-radius: 22px;
   background: linear-gradient(
     135deg,
-    rgba(255, 152, 0, 0.95),
-    rgba(255, 87, 34, 0.95)
+   #6764f1
+
+,
+  #040263
+
+
   );
   opacity: 0;
   transition: opacity 0.45s ease;
@@ -407,8 +423,8 @@
 
 .value-card:hover .value-circle {
   box-shadow:
-    0 0 0 6px rgba(255, 255, 255, 0.35),
-    0 15px 35px rgba(30, 136, 229, 0.65);
+    0 0 0 6px #f4b1c9,
+    0 15px 35px #efd4de;
 }
 .value-circle {
   animation: spinSlow 8s linear infinite, pulseBlue 3s ease-in-out infinite;
@@ -416,10 +432,10 @@
 
 @keyframes pulseBlue {
   0%, 100% {
-    box-shadow: 0 10px 25px rgba(30,136,229,0.45);
+    box-shadow: 0 10px 25px #f5c3d4;
   }
   50% {
-    box-shadow: 0 15px 35px rgba(30,136,229,0.7);
+    box-shadow: 0 15px 35px #f5c3d4;
   }
 }
 /* ======================
@@ -849,7 +865,7 @@
   border-radius: 22px;
   background: radial-gradient(
     circle at top,
-    rgba(255,255,255,0.35),
+    #040263,
     transparent 65%
   );
   opacity: 0;
@@ -905,7 +921,7 @@
   position: absolute;
   inset: -2px;
   border-radius: 26px;
-  
+  color: #FFF;
   opacity: 0;
   z-index: -1;
   transition: opacity 0.45s ease;
@@ -921,10 +937,10 @@
   margin: 0 auto 26px;
   border-radius: 50%;
   background: conic-gradient(
-    #1e88e5,
-    #42a5f5,
-    #0d47a1,
-    #1e88e5
+    #dfa5b9,
+    #f39dbb,
+    #da4c7e,
+    #ffcfe0
   );
   display: flex;
   align-items: center;
@@ -953,20 +969,21 @@
 }
 .objective-chart h5 {
   font-weight: 700;
-  color: #0d47a1;
+  /* color: #0d47a1; */
   margin-bottom: 10px;
   transition: transform 0.3s ease;
 }
 
 .objective-chart p {
   font-size: 14.8px;
-  color: #555;
+  /* color: #555; */
   transition: transform 0.3s ease;
 }
 
 .objective-chart:hover h5,
 .objective-chart:hover p {
   transform: translateY(-2px);
+  color: #fff;
 }
 .objective-chart {
   animation: softFloat 6s ease-in-out infinite;
