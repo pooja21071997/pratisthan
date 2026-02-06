@@ -28,12 +28,12 @@
 .animated-line {
   width: 0;
   height: 4px;
-  background: linear-gradient(90deg, #0d6efd, #ff9800);
+  background: linear-gradient(90deg, #0d6efd, #03011e);
   animation: lineGrow 1.2s ease forwards;
 }
 
 @keyframes lineGrow {
-  to { width: 120px; }
+  to { width: 150px; }
 }
 .management-table {
   border-collapse: separate;
@@ -44,7 +44,7 @@
   border: none;
   background: transparent;
   font-weight: 700;
-  color: #0d6efd;
+  color: #15025c;
   padding: 16px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -75,7 +75,7 @@
   display: inline-block;
   width: 10px;
   height: 10px;
-  background: linear-gradient(135deg, #0d6efd, #00c6ff);
+  background: linear-gradient(135deg, #0f172a, #7ddbee);
   border-radius: 50%;
   margin-right: 10px;
   box-shadow: 0 0 10px rgba(13,110,253,0.6);

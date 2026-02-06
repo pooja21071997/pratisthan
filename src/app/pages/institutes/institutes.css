@@ -72,7 +72,7 @@
   background: linear-gradient(
     135deg,
     rgba(13,110,253,0.35),
-    rgba(255,152,0,0.25)
+    rgba(24, 15, 1, 0.25)
   );
   opacity: 0;
   transition: opacity 0.5s ease;
@@ -85,7 +85,7 @@
   position: relative;
   text-decoration: none;
   font-weight: 700;
-  color: #0d6efd;
+  color: #15025c;
   transition: color 0.3s ease;
 }
 
@@ -96,7 +96,7 @@
   bottom: -6px;
   width: 0;
   height: 3px;
-  background: linear-gradient(90deg, #0d6efd, #ff9800);
+  background: linear-gradient(90deg, #0d6efd, #120b01);
   transition: width 0.4s ease;
 }
 
@@ -105,7 +105,7 @@
 }
 
 .institute-card:hover .institute-link {
-  color: #ff5722;
+  color: #15025c;
 }
 .institute-card .card-text {
   transition: color 0.4s ease, transform 0.4s ease;

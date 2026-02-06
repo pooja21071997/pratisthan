@@ -84,7 +84,7 @@
 .quote-text {
   font-size: clamp(1.8rem, 4vw, 3rem);
   font-weight: 800;
-  color: #0d6efd;
+  color:#040263;
   line-height: 1.3;
   opacity: 0;
   animation: fadeSlideDown 1.2s ease forwards;
@@ -150,7 +150,7 @@
   inset: -15px;
   border-radius: 50%;
   border: 3px solid transparent;
-  background: linear-gradient(135deg, #0d6efd, #00c6ff) border-box;
+  background: linear-gradient(135deg, #0f172a, #085564,#87cddc) border-box;
   animation: rotateRing 8s linear infinite;
   z-index: 1;
 }
