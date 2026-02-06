@@ -39,7 +39,7 @@
 
 /* Title color change on hover */
 .album-card:hover .album-title {
-  color: #0d6efd; /* Bootstrap primary blue */
+  color: #fff; /* Bootstrap primary blue */
 }
 
 /* Keyboard accessibility */
@@ -87,7 +87,7 @@
 }
 
 .album-card:hover .album-title {
-  color: #0d6efd;
+  color: #fff;
 }
 
 /* Keyboard accessibility */
@@ -195,8 +195,8 @@
   inset: 0;
   background: radial-gradient(
     circle at center,
-    rgba(13,110,253,0.35),
-    rgba(0,0,0,0.65)
+    rgba(255, 255, 255, 0.35),
+    rgba(247, 243, 243, 0.65)
   );
   opacity: 0;
   transition: opacity 0.5s ease;
@@ -214,7 +214,7 @@
 .album-title {
   font-weight: 700;
   letter-spacing: 0.5px;
-  color: #0d6efd;
+  color: #15025c;
   transform: translateY(10px);
   opacity: 0.75;
   transition: all 0.4s ease;
