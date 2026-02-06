@@ -83,11 +83,11 @@
 .role-pill {
   padding: 6px 14px;
   border-radius: 50px;
-  background: linear-gradient(135deg, #ff9800, #ff5722);
+  background: linear-gradient(135deg,#6764f1, #040263);
   color: #fff;
   font-size: 0.85rem;
   font-weight: 600;
-  box-shadow: 0 6px 18px rgba(255,87,34,0.35);
+  box-shadow: 0 6px 18px #b7b6f9;
   transition: transform 0.3s ease;
 }
 
