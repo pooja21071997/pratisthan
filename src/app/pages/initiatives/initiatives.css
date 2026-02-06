@@ -752,12 +752,12 @@
   height: 85px;
   margin: auto;
   border-radius: 50%;
-  background: radial-gradient(circle, #ffd43b, #ffb703);
+  background: radial-gradient(circle, #e5a7ba, #fa447a);
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
-  box-shadow: 0 0 30px rgba(255, 212, 59, 0.9);
+  box-shadow: 0 0 30px rgba(240, 154, 151, 0.9);
   animation: floatIcon 4s ease-in-out infinite;
 }
 

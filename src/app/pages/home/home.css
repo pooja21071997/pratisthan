@@ -350,7 +350,7 @@
 .value-card:hover {
   transform: translateY(-14px) scale(1.04);
   border: 2px solid #3F3F46; 
-  box-shadow:0 0 0 3px #5754f0,0 20px 45px #040263;
+  box-shadow:0 0 0 3px #0f172a,0 20px 45px #0f172a;
 }
 
 /* Slow animation on hover (premium feel) */
@@ -383,7 +383,7 @@
   position: absolute;
   inset: 0;
   border-radius: 22px;
-  background: linear-gradient(135deg, #6764f1,  #040263);
+  background: linear-gradient(135deg, #3b5185,  #0f172a);
   opacity: 0;
   transition: opacity 0.45s ease;
   z-index: 0;

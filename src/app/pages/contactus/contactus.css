@@ -6,7 +6,7 @@
   width: 45px;
   height: 45px;
   background: #fff;
-  color: #000;
+  color: #fff;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -51,7 +51,7 @@ iframe {
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #0d6efd, #00c6ff);
+  background: #085564;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -79,7 +79,7 @@ iframe {
   background: linear-gradient(
     120deg,
     rgba(13,110,253,0.08),
-    rgba(255,152,0,0.08)
+    rgba(104, 103, 102, 0.08)
   );
   transform: translateX(8px);
 }
@@ -94,11 +94,11 @@ iframe {
   height: 100%;
   min-height: 420px;
   border: 0;
-  transition: transform 1.2s ease;
+  /* transition: transform 1.2s ease; */
 }
 
 .map-wrapper:hover iframe {
-  transform: scale(1.08);
+  /* transform: scale(1.08); */
 }
 .map-overlay {
   position: absolute;
