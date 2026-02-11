@@ -318,9 +318,7 @@
   width: 72px;
   height: 72px;
   border-radius: 50%;
- background: linear-gradient(135deg, #f39dbb
-, #da4c7e
-);
+ background: linear-gradient(135deg, #f744a0, #e94699);
   box-shadow: 0 10px 25px #f7bbd0;
   display: flex;
   align-items: center;
@@ -905,8 +903,8 @@
 .objective-chart:hover {
   transform: translateY(-14px) scale(1.04);
   box-shadow:
-    0 0 0 3px rgba(30, 136, 229, 0.35),
-    0 25px 55px rgba(13, 71, 161, 0.45);
+    0 0 0 3px #085564,
+    0 25px 55px #0f172a;
 }
 .objective-chart::after {
   content: "";
@@ -929,10 +927,10 @@
   margin: 0 auto 26px;
   border-radius: 50%;
   background: conic-gradient(
-    #dfa5b9,
-    #f39dbb,
-    #da4c7e,
-    #ffcfe0
+    #f796c8,
+    #f744a0,
+    #e94699,
+    #f1bcd8
   );
   display: flex;
   align-items: center;
