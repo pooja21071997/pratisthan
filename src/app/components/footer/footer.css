@@ -13,7 +13,10 @@
   position: relative;
   color: #2c2c54;
 }
-
+.footer-contact i {
+  margin-right: 8px;
+  color: #6c63ff;
+}
 .footer-heading::after {
   content: "";
   width: 50px;
