@@ -1,12 +1,15 @@
 <!-- ===== ANIMATED HERO CAROUSEL ===== -->
-<div id="homeCarousel" class="carousel slide carousel-fade hero-carousel mt-3" data-bs-ride="carousel" data-bs-interval="5000">
-
+<div
+  id="homeCarousel"
+  class="carousel slide carousel-fade hero-carousel mt-3"
+  data-bs-ride="carousel"
+  data-bs-interval="5000"
+>
   <div class="carousel-inner">
-
     <!-- Slide 1 -->
     <div class="carousel-item active">
       <div class="hero-slide">
-        <img src="assets/images/slider/1.jpg" class="hero-img" alt="Slide 1">
+        <img src="assets/images/slider/1.jpg" class="hero-img" alt="Slide 1" />
         <div class="hero-overlay"></div>
         <div class="hero-content">
           <h1>Excellence in Education</h1>
@@ -18,7 +21,7 @@
     <!-- Slide 2 -->
     <div class="carousel-item">
       <div class="hero-slide">
-        <img src="assets/images/slider/2.jpg" class="hero-img" alt="Slide 2">
+        <img src="assets/images/slider/2.jpg" class="hero-img" alt="Slide 2" />
         <div class="hero-overlay"></div>
         <div class="hero-content">
           <h1>Modern Infrastructure</h1>
@@ -30,7 +33,7 @@
     <!-- Slide 3 -->
     <div class="carousel-item">
       <div class="hero-slide">
-        <img src="assets/images/slider/3.jpg" class="hero-img" alt="Slide 3">
+        <img src="assets/images/slider/3.jpg" class="hero-img" alt="Slide 3" />
         <div class="hero-overlay"></div>
         <div class="hero-content">
           <h1>Innovative Learning</h1>
@@ -42,7 +45,7 @@
     <!-- Slide 4 -->
     <div class="carousel-item">
       <div class="hero-slide">
-        <img src="assets/images/slider/4.jpg" class="hero-img" alt="Slide 4">
+        <img src="assets/images/slider/4.jpg" class="hero-img" alt="Slide 4" />
         <div class="hero-overlay"></div>
         <div class="hero-content">
           <h1>Strong Values</h1>
@@ -50,8 +53,8 @@
         </div>
       </div>
     </div>
-	
-	 <!-- Slide 5 -->
+
+    <!-- Slide 5 -->
     <div class="carousel-item">
       <div class="hero-slide">
         <img src="assets/images/slider/5.jpg" class="hero-img" alt="Slide 5" />
@@ -62,52 +65,58 @@
         </div>
       </div>
     </div>
-
   </div>
 
   <!-- Controls -->
-  <button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev">
+  <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#homeCarousel"
+    data-bs-slide="prev"
+  >
     <span class="carousel-control-prev-icon"></span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#homeCarousel" data-bs-slide="next">
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#homeCarousel"
+    data-bs-slide="next"
+  >
     <span class="carousel-control-next-icon"></span>
   </button>
-
 </div>
 
-<section class="hero-section my-5">
+<section class="about-section my-5">
   <div class="container">
     <div class="row align-items-center g-5">
-
       <!-- Text -->
-      <div class="col-lg-6 hero-content">
-        <span class="hero-badge">Who We Are</span>
-        <h1 class="hero-title">
-          About <span>Our Institution</span>
-        </h1>
+      <div class="col-lg-6 about-content">
+        <span class="about-badge">Who We Are</span>
 
-        <p class="hero-text">
+        <h1 class="about-title">About <span>Our Institution</span></h1>
+
+        <div class="about-line"></div>
+
+        <p class="about-text">
           Keshav Smruti Pratishthan's unique education, inspired by the ancient
-          <strong>Gurukul</strong> system, focuses on building disciplined,
-          physically fit citizens with strong character beyond academics.
-          Established in 1987, Vivekanand Pratishthan blends culture with
-          scientific education.
+          <strong>Gurukul</strong> system, focuses on building disciplined, physically fit citizens
+          with strong character beyond academics. Established in 1987, Vivekanand Pratishthan blends
+          culture with scientific education.
         </p>
 
-        <a class="btn hero-btn" [routerLink]="['/about']">Explore More</a>
+        <a class="btn about-btn" [routerLink]="['/about']"> Explore More → </a>
       </div>
 
       <!-- Image -->
-      <div class="col-lg-6 hero-image-wrapper">
-        <div class="hero-image-glow">
+      <div class="col-lg-6 about-image-wrapper">
+        <div class="about-image-glow">
           <img
             src="assets/images/school-img-e1760602747778.png"
             alt="About Us"
-            class="hero-image"
+            class="about-image"
           />
         </div>
       </div>
-
     </div>
   </div>
 </section>
@@ -116,41 +125,28 @@
 <section class="inspiration-hero mt-5">
   <div class="container">
     <div class="row align-items-center g-5">
-
       <!-- Text Content -->
       <div class="col-lg-6 inspiration-content">
         <span class="inspiration-tag">Our Inspiration</span>
 
-        <h1 class="inspiration-title">
-          A Life That <span>Ignited Millions</span>
-        </h1>
+        <h1 class="inspiration-title">A Life That <span>Ignited Millions</span></h1>
 
         <p class="inspiration-text">
-          Dr. Avinash Ramchandra Aacharya embodied the spirit of determination and innovation.
-          His fearless leadership, unwavering courage, and relentless pursuit of excellence
-          continue to guide generations. A true visionary, his life stands as a glowing reminder
-          that greatness belongs to those who dare to dream and act with purpose.
+          Dr. Avinash Ramchandra Aacharya embodied the spirit of determination and innovation. His
+          fearless leadership, unwavering courage, and relentless pursuit of excellence continue to
+          guide generations. A true visionary, his life stands as a glowing reminder that greatness
+          belongs to those who dare to dream and act with purpose.
         </p>
 
-        <a
-          class="btn inspiration-btn"
-          [routerLink]="['/founder-message']"
-        >
-          Discover His Legacy
-        </a>
+        <a class="btn inspiration-btn" [routerLink]="['/founder-message']"> Discover His Legacy </a>
       </div>
 
       <!-- Image -->
       <div class="col-lg-6 d-flex justify-content-center">
         <div class="inspiration-image-wrapper">
-          <img
-            src="assets/images/founder-img.jpg"
-            alt="Founder"
-            class="inspiration-image"
-          />
+          <img src="assets/images/founder-img.jpg" alt="Founder" class="inspiration-image" />
         </div>
       </div>
-
     </div>
   </div>
 </section>
@@ -232,7 +228,8 @@
         <div class="card-body">
           <h5 class="card-title text-center">Continuous Learning</h5>
           <p class="card-text text-muted">
-           Embracing evolving teaching methods and continuous learning shapes a stronger personality.
+            Embracing evolving teaching methods and continuous learning shapes a stronger
+            personality.
           </p>
         </div>
       </div>
@@ -245,7 +242,7 @@
         <div class="card-body">
           <h5 class="card-title text-center">Responsibility and Accountability</h5>
           <p class="card-text text-muted">
-           A person must fulfill their personal, social, national, and human duties.
+            A person must fulfill their personal, social, national, and human duties.
           </p>
         </div>
       </div>
@@ -274,7 +271,8 @@
         <div class="card-body">
           <h5 class="card-title text-center">Nationalism and Patriotism</h5>
           <p class="card-text text-muted">
-           Patriotism is augmented by offering mind, body and life in the service of the motherland.
+            Patriotism is augmented by offering mind, body and life in the service of the
+            motherland.
           </p>
         </div>
       </div>
@@ -287,7 +285,8 @@
         <div class="card-body">
           <h5 class="card-title text-center">Social Sensitivity</h5>
           <p class="card-text text-muted">
-            Providing quality education for all,and activity based learning for the deprived is our duty.
+            Providing quality education for all,and activity based learning for the deprived is our
+            duty.
           </p>
         </div>
       </div>
@@ -313,7 +312,8 @@
         <div class="card-body">
           <h5 class="card-title text-center">Team Work</h5>
           <p class="card-text text-muted">
-           Work with respect for others values, guided by elders ideas, and serve socienty with excellence.
+            Work with respect for others values, guided by elders ideas, and serve socienty with
+            excellence.
           </p>
         </div>
       </div>
