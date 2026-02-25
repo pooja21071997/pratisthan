@@ -1,4 +1,8 @@
-<div class="container py-5 album-view" *ngIf="album">
+<div class="container py-5 album-view position-relative" *ngIf="album">
+    <button class="back-btn" (click)="goBack()">
+    <i class="fa-solid fa-arrow-left me-2"></i>
+    Back
+  </button>
   <!-- Album Title -->
   <h2 class="text-blue fw-bold mb-5 text-center album-title">
     {{ album.name }}
