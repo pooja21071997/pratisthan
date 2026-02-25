@@ -867,10 +867,7 @@
   opacity: 1;
 }
 @media (max-width: 768px) {
-  .value-card {
-    /* animation: none; */
-  }
-
+  
   .value-card:hover {
     transform: translateY(-5px) scale(1.02);
   }
